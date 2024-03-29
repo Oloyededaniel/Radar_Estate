@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--This fulfills requirement 1.5-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radar's Estate - Home</title>
+    <!--This fulfills requirement 1.6-->
+    <link rel="stylesheet" href="styles.css">
+
+    <!--This fulfills requirement 1.11-->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+</head>
+<body>
+    <!--This fulfills requirement 1.1-->
+    <header>
+        <h1>Radar's Estate</h1>
+    </header>
+
+    <nav>
+        <!--This fulfills requirement 1.2-->
+        <a href="index.html">Home</a>
+        <a href="Property_listings.html">Property Listings</a>
+        <a href="About.html">About Us</a>
+        <a href="ContactUs.html">Contact Us</a>
+        <a href="services.html">Services</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="mortgagecalc.html">Mortgage Calculator</a>
+        <a href="cross_reference.html">Cross Reference</a>
+    </nav>
+
+    <div class="hero-section">
+        <!--This fulfills requirement 1.3-->
+        <h2>Welcome to Radar's Estate</h2>
+    </div>
+
+    <div class="video-container">
+        <!--This fulfills requirement 1.4-->
+        <video width="100%" height="auto" controls> 
+            <source src="Vid1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="featured-listings">
+        <!--This fulfills requirement 1.7-->
+        <div class="property-card">
+            <img src="property1.jpg" alt="Property 1">
+            <h3>Beautiful Home</h3>
+            <p>A stunning home with modern amenities, spacious rooms, and a beautiful garden. Located in a quiet neighborhood, this property is perfect for a family.</p>
+            <p><b>Price: $500,000</b></p>
+        </div>
+
+        <div class="property-card">
+            <img src="property2.jpg" alt="Property 2">
+            <h3>Modern Apartment</h3>
+            <p>This contemporary apartment features an open floor plan, high-end finishes, and panoramic city views. Conveniently located near shopping and dining.</p>
+            <p><b>Price: $300,000</b></p>
+        </div>
+
+        <div class="property-card">
+            <img src="property3.jpg" alt="Property 3">
+            <h3>Cozy Cottage</h3>
+            <p>A charming cottage with a rustic feel, a fireplace, and a private backyard. Ideal for those seeking a peaceful retreat in the heart of nature.</p>
+            <p><b>Price: $200,000</b></p>
+        </div>
+      
+    </div>
+
+    <footer id="site-footer">
+        <!--This fulfills requirement 1.8-->
+        <p>Contact us at: <a href="mailto:radarestate@radar.com" style="color:#ffcc00;">radarestate@radar.com</a> | 
+            Follow us on social media: <a href="https://www.facebook.com/radarestate" style="color:#ffcc00;">@radarestate</a></p>
+        <p id="last-updated">Last Updated: <span id="update-date"></span></p>
+    </footer>
+
+    <!--This fulfills requirement 1.9-->
+    <script>
+        const lastUpdatedElement = document.getElementById('update-date');
+        const siteFooter = document.getElementById('site-footer');
+        
+        const lastUpdateDate = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+        lastUpdatedElement.textContent = lastUpdateDate;
+    </script>
+</body>
+</html>

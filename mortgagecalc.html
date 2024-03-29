@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radar's Estate - Mortgage Calculator</title>
+
+    <!--This fulfills requirement 7.9-->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!--This fulfills requirement 7.5-->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1em;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #444;
+            padding: 0.5em;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5em 1em;
+        }
+
+        .calculator-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin: 20px auto;
+            max-width: 400px;
+        }
+
+        h1 {
+            color: white;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        label {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        input {
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        /*This fulfills requirement 7.4 */
+        button:hover {
+            background-color: #4caf50;
+        }
+
+        h2 {
+            margin-top: 20px;
+            color: #333;
+        }
+
+        p#monthlyPayment {
+            font-size: 1.2em;
+            color: #265e16;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!--This fulfills requirement 7.1-->
+        <h1>Radar's Estate</h1>
+    </header>
+
+    <nav>
+        <!--This fulfills requirement 7.2-->
+        <a href="index.html">Home</a>
+        <a href="Property_listings.html">Property Listings</a>
+        <a href="About.html">About Us</a>
+        <a href="ContactUs.html">Contact Us</a>
+        <a href="services.html">Services</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="mortgagecalc.html">Mortgage Calculator</a>
+    </nav>
+
+    <!--This fulfills requirement 7.6-->
+    <div class="calculator-container">
+        <form id="mortgageForm">
+            <label for="loanAmount">Loan Amount:</label>
+            <!--This fulfills requirement 7.7-->
+            <input type="number" id="loanAmount" step ="250" placeholder="Enter loan amount" required>
+
+            <label for="interestRate">Interest Rate (%):</label>
+            <input type="number" id="interestRate" step="0.25" placeholder="Enter interest rate" required>
+
+            <label for="loanTerm">Loan Term (Years):</label>
+            <input type="number" id="loanTerm" placeholder="Enter loan term(in years)" required>
+
+            <button type="button" onclick="calculateMortgage()">Calculate</button>
+
+            <h2>Monthly Payment:</h2>
+            <p id="monthlyPayment">$0.00</p>
+        </form>
+    </div>
+
+    <footer>
+        <!--This fulfills requirement 7.3-->
+        <p>Contact us at: <a href="mailto:radarestate@radar.com" style="color:#e6e3d7;">radarestate@radar.com</a> | 
+            Follow us on social media: <a href="https://www.facebook.com/radarestate" style="color:#e6e3d7;">@radarestate</a></p>
+    </footer>
+
+    <script>
+        //This fulfills requirement 7.8
+        function calculateMortgage() {
+            const loanAmount = parseFloat(document.getElementById('loanAmount').value);
+            const interestRate = parseFloat(document.getElementById('interestRate').value);
+            const loanTerm = parseFloat(document.getElementById('loanTerm').value);
+
+            const monthlyInterestRate = (interestRate / 100) / 12;
+            const numberOfPayments = loanTerm * 12;
+
+            const numerator = monthlyInterestRate * Math.pow(1 + monthlyInterestRate, numberOfPayments);
+            const denominator = Math.pow(1 + monthlyInterestRate, numberOfPayments) - 1;
+
+            const monthlyPayment = (loanAmount * (numerator / denominator)).toFixed(2);
+
+            document.getElementById('monthlyPayment').textContent = `$${monthlyPayment} per month`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radar's Estate - Property Listings</title>
+
+    <!--This fulfills requirement 2.7-->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!--This fulfills requirement 2.3-->
+    <style>
+        body, h1, h2, h3, p, div, img, input, button {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1em;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #444;
+            padding: 0.5em;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5em 1em;
+        }
+
+        .property-card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .property-card {
+            border: 1px solid #ddd;
+            padding: 1em;
+            margin: 1em;
+            width: calc(50% - 2em); 
+            box-sizing: border-box;
+        }
+
+        .property-card img {
+            width: 100%;
+            height: auto;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!--This fulfills requirement 2.5-->
+        <h1>Radar's Estate</h1>
+    </header>
+
+    <!--This fulfills requirement 2.1-->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="property_listings.html">Property Listings</a>
+        <a href="About.html">About Us</a>
+        <a href="ContactUs.html">Contact Us</a>
+        <a href="services.html">Services</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="mortgagecalc.html">Mortgage Calculator</a>
+    </nav>
+
+    <div class="property-card-container">
+        <!--This fulfills requirement 2.6-->
+        <div class="property-card">
+            <!--This fulfills requirement 2.2-->
+            <img src="property1.jpg" alt="Property 1">
+            <h3>Beautiful Home</h3>
+            <p>A stunning home with modern amenities, spacious rooms, and a beautiful garden. Located in a quiet neighborhood, this property is perfect for a family.</p>
+            <p><b>Price: $500,000</b></p>
+        </div>
+
+        <div class="property-card">
+            <img src="property2.jpg" alt="Property 2">
+            <h3>Modern Apartment</h3>
+            <p>This contemporary apartment features an open floor plan, high-end finishes, and panoramic city views. Conveniently located near shopping and dining.</p>
+            <p><b>Price: $300,000</b></p>
+        </div>
+
+        <div class="property-card">
+            <img src="property3.jpg" alt="Property 3">
+            <h3>Cozy Cottage</h3>
+            <p>A charming cottage with a rustic feel, a fireplace, and a private backyard. Ideal for those seeking a peaceful retreat in the heart of nature.</p>
+            <p><b>Price: $200,000</b></p>
+        </div>
+
+        <div class="property-card">
+            <img src="property4.jpg" alt="Property 4">
+            <h3>Luxury Penthouse</h3>
+            <p>Experience luxury living in this spacious penthouse with floor-to-ceiling windows, a rooftop terrace, and breathtaking city skyline views.</p>
+            <p><b>Price: $1,200,000</b></p>
+        </div>
+
+        <div class="property-card">
+            <img src="property5.jpg" alt="Property 5">
+            <h3>Waterfront Villa</h3>
+            <p>A waterfront villa with private beach access, a swimming pool, and expansive ocean views. Perfect for those who love coastal living.</p>
+            <p><b>Price: $800,000</b></p>
+        </div>
+
+        <div class="property-card">
+            <img src="property6.jpg" alt="Property 6">
+            <h3>Historic Mansion</h3>
+            <p>Own a piece of history with this beautifully restored historic mansion featuring period details, lush gardens, and grand architecture.</p>
+            <p><b>Price: $2,500,000</b></p>
+        </div>
+    </div>
+
+    <footer>
+        <!--This fulfills requirement 2.4-->
+        <p>Contact us at: <a href="mailto:radarestate@radar.com" style="color:#e6e3d7;">radarestate@radar.com</a> | 
+            Follow us on social media: <a href="https://www.facebook.com/radarestate" style="color:#e6e3d7;">@radarestate</a></p>
+    </footer>
+</body>
+</html>
